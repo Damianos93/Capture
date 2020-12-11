@@ -9,7 +9,7 @@ function Aboutus(props) {
         <>
            <AboutSection />
             <ServicesSection />
-            <FaqSection/>
+            <FaqSection/> 
         </>
     )
 }
