@@ -7,8 +7,8 @@ padding:0;
 box-sizing:border-box;
 }
 body {
-    background:#1b1b1b
-}
+    background:#1b1b1b;
+    font-family: 'Scheherazade', serif;}
 button{
     font-weight:bold;
     font-size:1.1rem;
@@ -21,6 +21,7 @@ button{
     &:hover{
     border: 3px solid #23d997;
     color:white;
+    font-family: 'Scheherazade', serif;
 }
 }
 h2{
