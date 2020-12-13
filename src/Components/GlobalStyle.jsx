@@ -8,7 +8,9 @@ box-sizing:border-box;
 }
 body {
     background:#1b1b1b;
-    font-family: 'Scheherazade', serif;}
+    font-family: 'Scheherazade', serif;
+    
+    }
 button{
     font-weight:bold;
     font-size:1.1rem;
@@ -34,11 +36,12 @@ h2{
     p{
         padding:3rem 0rem;
         color:#ccc;
-        font-size:1.4rem;
+        font-size:1.8rem;
         line-height:150%;
     }
     h4{
         font-weight:bold;
+        font-size:3rem; 
             }
             span{
                 font-weight:bold;
