@@ -74,7 +74,7 @@ h2{
   background:#cccccc;
   height:0.2rem;
   margin:2rem;
-  width:100%
+  width:100%;
 }
 .question{
   padding:3rem 0rem;

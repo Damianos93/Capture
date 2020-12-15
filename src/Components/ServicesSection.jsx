@@ -60,7 +60,7 @@ h2{
 }
 p{
   width:70%;
-  padding:2rem 0rem 4rem 0rem
+  padding:2rem 0rem 4rem 0rem;
 }
 `
 
@@ -74,7 +74,7 @@ flex-basis:20rem;
 .icon{
   display:flex;
   align-items:center;
-  h3{
+  h3{ 
     margin-left:1rem;
     background:white;
     color:black;
