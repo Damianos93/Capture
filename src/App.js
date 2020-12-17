@@ -7,12 +7,15 @@ import OurWork from "./pages/OurWork";
 import { Switch, Route,useLocation } from "react-router-dom";
 import Moviedetail from "./pages/MovieDetail.jsx";
 import {AnimatePresence, animatePresence} from "framer-motion"
+import Scrolltop from "./Components/ScrollTop.jsx";
+
 
 function App() {
   const location = useLocation()
   return (
     <div className="App">
       <GlobalStyle />
+      <Scrolltop/>
       <Nav />
       <AnimatePresence exitBeforeEnter>
       <Switch location={location} key={location.pathname}>

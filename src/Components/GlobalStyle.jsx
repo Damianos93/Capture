@@ -16,6 +16,7 @@ body{
     background: #1b1b1b;
     font-family: 'Scheherazade', serif;
     overflow-x: hidden;
+    /* padding-left:3.5rem; */
 }
 button{
     font-weight: bold;

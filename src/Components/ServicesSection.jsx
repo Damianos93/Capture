@@ -6,11 +6,18 @@ import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png"
 import {About,Description,Image} from "../styles"
 import styled from "styled-components";
+import {useInView} from "react-intersection-observer"
+import {useAnimation} from "framer-motion"
+import {scrollReveal} from "../animation"
+import { useScroll } from "./useScroll";
+
+
 
 
 function Servicessection(props) {
+    const [element,controls]= useScroll()
   return (
-    <Services>
+    <Services animate={controls} initial="hidden" variants={scrollReveal} ref={element}>
       <Description>
         <h2>
           {" "}
@@ -62,11 +69,15 @@ p{
   width:70%;
   padding:2rem 0rem 4rem 0rem;
 }
+
 `
 
 const Cards=styled.div`
 display:flex;
 flex-wrap:wrap;
+@media (max-width: 1300px){
+        justify-content:center; 
+      }
 `
 
 const Card=styled.div`

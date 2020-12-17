@@ -1,16 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
+import Toggle from "./Toggle";
+import { AnimateSharedLayout } from "framer-motion";
+import { useScroll } from "./useScroll";
+import {scrollReveal} from "../animation"
 
 
 function Faqsection(props) {
+  const [element,controls]= useScroll()
   return (
-    <Faq>
+    <Faq variants={scrollReveal} ref={element} initial="hidden" animate={controls}>
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How do i start?</h4>
+      <AnimateSharedLayout>
+      <Toggle title="How Do I Start?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -19,10 +24,8 @@ function Faqsection(props) {
             Quidem!
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily Schedule?</h4>
+      </Toggle>
+      <Toggle title="Daily Schedule?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -31,10 +34,8 @@ function Faqsection(props) {
             Quidem!
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Different Payment Methods</h4>
+      </Toggle>
+      <Toggle title="Different Payment Methods">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -43,10 +44,8 @@ function Faqsection(props) {
             Quidem!
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What product do you offer?</h4>
+      </Toggle>
+      <Toggle title="What product do you offer?">
         <div className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
@@ -55,37 +54,37 @@ function Faqsection(props) {
             Quidem!
           </p>
         </div>
-        <div className="faq-line"></div>
-      </div>
+      </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 }
 
-const Faq=styled(About)`
-display:block;
-span{
-  display:block;
-}
-h2{
-  padding-bottom:2rem;
-  font-weight:lighter;
-}
-.faq-line{
-  background:#cccccc;
-  height:0.2rem;
-  margin:2rem;
-  width:100%;
-}
-.question{
-  padding:3rem 0rem;
-  cursor:pointer;
-}
-.answer{
-  padding:2rem 0rem;
-  p{
-    padding:1rem 0rem; 
+const Faq = styled(About)`
+  display: block;
+  span {
+    display: block;
   }
-}
-`
+  h2 {
+    padding-bottom: 2rem;
+    font-weight: lighter;
+  }
+  .faq-line {
+    background: #cccccc;
+    height: 0.2rem;
+    margin: 2rem;
+    width: 100%;
+  }
+  .question {
+    padding: 3rem 0rem;
+    cursor: pointer;
+  }
+  .answer {
+    padding: 2rem 0rem;
+    p {
+      padding: 1rem 0rem;
+    }
+  }
+`;
 
 export default Faqsection;
